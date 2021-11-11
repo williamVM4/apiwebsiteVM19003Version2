@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo web api</title>
+	<meta charset="utf-8"  />
+	<meta name="author" content="William Enrique Vasquez Mancia">
+	<meta name="keywords" content="api,productos">
+	<meta name="description" content="VM19003 Guia 61c tpi115">
+<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="codigo.js"></script>
+
+</head>
+
+<body >
+ <h1>Guia 61c web api</h1>
+     <p>William Enrique Vasquez Mancia</p>
+	 <p>VM19003 Guia 61c TPI115</p>
+	 <p><button id ="obtener" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
+	 <div id = "formulario" style="display:none;">
+		<label for="ftitulo">Titulo </label> <input type="text" id="ftitulo"> <label for="fprecio">Precio </label> <input type="text" id="fprecio"><br>
+		<label for="fdescripcion">Descripcion </label> <input type="text" id="fdescripcion" ><br>
+		<label for="fimagen">Imagen </label> <input type="text" id="fimagen"> <label for="fcategoria">Categoria </label><input type="Text" id="fcategoria">
+		<p><button id ="agregar" onclick="agregarProducto()">Agregar Producto</button></p>
+	</div>
+
+	 <div id="listado" style="display:none;">
+	 <form name="filtroprods" id="filtroprods">
+	   Seleccione las categorias: 
+	   <input type="checkbox" id="c1" value="c1" checked>Electronicos
+	 <input type="checkbox" id="c2" value="c2" checked>Joyería
+   <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+   <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+   <ol><li>Click en la imagen para Acercamiento</li>
+   <li>Click en precio para ordenar Asc o Desc</li></ol>
+     <table id="tabla">
+	 <thead>
+	 <tr><th>id</th><th>foto</th><th  id="price">price</th>
+	 <th>title</th><th>description</th><th>category</th><th>Eliminar</th></tr>
+	 </thead>
+	 <tbody id="tbody"></tbody>
+	 </table>
+	 </form>
+	 </div>
+</body>
+</html>
